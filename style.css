@@ -1,0 +1,126 @@
+:root {
+  --bg: linear-gradient(135deg, #eef1ff 0%, #f7f7f7 100%);
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --text: #0f172a;
+  --muted: #6b7280;
+  --accent: #4f46e5;
+  --radius: 14px;
+  --shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==== HEADER ==== */
+.header {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+.header h1 {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 1.8rem;
+}
+.header p {
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* ==== LAYOUT ==== */
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  padding: 20px 40px;
+  flex: 1;
+}
+.card {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px 26px;
+  display: flex;
+  flex-direction: column;
+}
+h2 { margin-bottom: 16px; }
+
+/* ==== FORM ==== */
+.field { margin-bottom: 14px; display: flex; flex-direction: column; }
+label {
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+input, textarea {
+  border: 1px solid #cbd5e1;
+  border-radius: var(--radius);
+  padding: 10px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  background: rgba(255, 255, 255, 0.9);
+}
+textarea { resize: none; }
+
+.btn-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+
+.btn {
+  padding: 10px 14px;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.btn.primary {
+  background: var(--accent);
+  color: white;
+}
+.btn.primary:hover {
+  background: #4338ca;
+}
+.btn.secondary {
+  background: #e2e8f0;
+  color: var(--text);
+}
+.btn.secondary:hover {
+  background: #d1d5db;
+}
+
+/* ==== OUTPUT ==== */
+.output-box {
+  border: 1px solid #d1d5db;
+  border-radius: var(--radius);
+  background: white;
+  padding: 18px;
+  min-height: 380px;
+  overflow-y: auto;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.placeholder {
+  text-align: center;
+  color: var(--muted);
+  margin-top: 100px;
+}
+
+/* ==== FOOTER ==== */
+.footer {
+  text-align: center;
+  padding: 16px;
+  color: var(--muted);
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 950px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}

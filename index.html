@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Resume & Cover Letter Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="header">
+    <h1>🤖 AI Resume & Cover Letter Generator</h1>
+    <p>Transform your career with perfectly written AI-powered documents.</p>
+  </header>
+
+  <main class="wrapper">
+    <!-- Input Section -->
+    <section class="card input-section">
+      <h2>Enter Your Details</h2>
+      <form id="resumeForm">
+        <div class="field">
+          <label>Full Name</label>
+          <input type="text" id="fullName" placeholder="Roshini" required />
+        </div>
+        <div class="field">
+          <label>Email</label>
+          <input type="email" id="email" placeholder="Roshini@example.com" required />
+        </div>
+        <div class="field">
+          <label>Job Title</label>
+          <input type="text" id="jobTitle" placeholder="Frontend Developer" required />
+        </div>
+        <div class="field">
+          <label>Experience</label>
+          <textarea id="experience" rows="3" placeholder="2 years building responsive web apps..."></textarea>
+        </div>
+        <div class="field">
+          <label>Skills</label>
+          <input type="text" id="skills" placeholder="HTML, CSS, JavaScript, React" />
+        </div>
+        <div class="field">
+          <label>Target Company</label>
+          <input type="text" id="company" placeholder="e.g. Google" />
+        </div>
+
+        <div class="btn-row">
+          <button type="button" id="generateResume" class="btn primary">🧾 Generate Resume</button>
+          <button type="button" id="generateLetter" class="btn secondary">✉️ Generate Cover Letter</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Output Section -->
+    <section class="card output-section">
+      <h2>Generated Output</h2>
+      <div id="outputBox" class="output-box">
+        <p class="placeholder">Your AI-generated resume or cover letter will appear here.</p>
+      </div>
+      <div class="btn-row">
+        <button id="copyBtn" class="btn secondary">📋 Copy</button>
+        <button id="downloadBtn" class="btn primary">📥 Download PDF</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 AI Resume Builder | Crafted with ❤️ by Roshini</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
